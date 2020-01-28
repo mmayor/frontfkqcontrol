@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-var PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -9,7 +8,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'public'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -27,10 +27,10 @@ module.exports = {
               loader: "sass-loader" // compiles Sass to CSS
           }]
         }, //css only files
-        { 
-          test: /\.(png|svg|jpg|gif)$/, use: {
+        {
+          test: /\.(png|svg|jpg|gif|jpeg|webp)$/, use: {
             loader: 'file-loader',
-            options: { name: '[name].[ext]' } 
+            options: { name: '[name].[ext]' }
           }
         }, //for images
         { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
@@ -39,15 +39,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js']
   },
-  devtool: "source-map",
-  devServer: {
-    contentBase:  './dist',
-    hot: true,
-    disableHostCheck: true,
-    historyApiFallback: true
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       Popper: 'popper.js',
@@ -59,17 +51,6 @@ module.exports = {
     new HtmlWebpackPlugin({
         favicon: '4geeks.ico',
         template: 'template.html'
-    }),
-    new PrettierPlugin({
-      parser: "babylon",
-      printWidth: 80,             // Specify the length of line that the printer will wrap on.
-      tabWidth: 4,                // Specify the number of spaces per indentation-level.
-      useTabs: true,              // Indent lines with tabs instead of spaces.
-      bracketSpacing: true,
-      extensions: [ ".js", ".jsx" ],
-      jsxBracketSameLine: true,
-      semi: true,                 // Print semicolons at the ends of statements.
-      encoding: 'utf-8'           // Which encoding scheme to use on files
     })
   ]
 };
