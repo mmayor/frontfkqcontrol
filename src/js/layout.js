@@ -7,8 +7,11 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Profile } from "./views/profile";
 import { MotorTest } from "./views/motorTest";
+import { Battery } from "./views/battery";
 import { SimulateTest } from "./views/simulateTest";
+import { TestRaspberry } from "./views/testraspberry";
 import { HistoryMotor } from "./views/historyMotor";
+
 // import { ModalMotor } from "./component/modal";
 import { Modal } from "./component/Modal";
 import injectContext from "./store/appContext";
@@ -31,7 +34,9 @@ export class Layout extends React.Component {
 							<Route path="/profile" component={Profile} />
 							<Route path="/motortest" component={MotorTest} />
 							<Route path="/simulatetest" component={SimulateTest} />
+							<Route path="/testraspberry" component={TestRaspberry} />
 							<Route path="/historymotor" component={HistoryMotor} />
+							<Route path="/battery" component={Battery} />
 
 							<Route exact path="/modal/:id" component={Modal} />
 

@@ -10,23 +10,15 @@ export class ChartCurrent extends React.Component {
 			datasets: [
 				{
 					label: "Test Motor",
-					fill: false,
-					lineTension: 0.1,
-					backgroundColor: "rgba(75,192,192,0.4)",
-					borderColor: "rgba(75,192,192,1)",
-					borderCapStyle: "butt",
-					borderDash: [],
-					borderDashOffset: 0.0,
-					borderJoinStyle: "miter",
-					pointBorderColor: "rgba(75,192,192,1)",
-					pointBackgroundColor: "#fff",
-					pointBorderWidth: 1,
-					pointHoverRadius: 5,
-					pointHoverBackgroundColor: "rgba(75,192,192,1)",
-					pointHoverBorderColor: "rgba(220,220,220,1)",
-					pointHoverBorderWidth: 2,
-					pointRadius: 1,
-					pointHitRadius: 10,
+
+					fillColor: "rgba(151,187,205,0.2)",
+					strokeColor: "rgba(151,187,205,1)",
+					pointColor: "rgba(151,187,205,1)",
+					pointStrokeColor: "#fff",
+					pointHighlightFill: "#fff",
+					pointHighlightStroke: "rgba(151,187,205,1)",
+					backgroundColor: "rgba(255, 99, 132,.5)",
+					borderColor: "rgba(255, 99, 132,1)",
 					data: [4, 10, 20, 30, 40, 10, 25, 36]
 				}
 			]
@@ -44,12 +36,13 @@ export class ChartCurrent extends React.Component {
 								options={{
 									title: {
 										display: true,
-										text: "C / t",
+										text: "Electric Current / Time",
 										fontSize: 20
 									},
+
 									legend: {
-										display: false,
-										position: "top"
+										display: true,
+										position: "bottom"
 									}
 								}}
 							/>

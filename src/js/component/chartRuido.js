@@ -32,11 +32,11 @@ export class ChartRuido extends React.Component {
 								options={{
 									title: {
 										display: true,
-										text: "C / t",
+										text: "Electric Resistance / Time",
 										fontSize: 20
 									},
 									legend: {
-										display: false,
+										display: true,
 										position: "bottom"
 									}
 								}}

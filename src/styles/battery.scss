@@ -1,0 +1,46 @@
+#battery--block {
+ position: fixed;
+ top: 25%;
+ left: 25%;
+ right: 0%;
+ bottom: 25%;
+ width: 25%;
+ height:n 25%;
+ background: #fff;
+ // overflow: hidden ;
+ z-index: 99999;
+}
+#battery{
+position: absolute;
+top:50%;left:50%;width:100%;height:100%;
+margin:-46.5px 0 0 -46.5px 
+}
+#battery--indicator{
+position:relative;
+background-color:rgba(0,0,0,0.2);
+width:9px;height:28px;margin:0 
+}
+#battery--indicator:after,
+#battery--indicator:before{
+content:"";
+background-color:
+transparent;
+border:6px solid rgba(0,0,0,1);
+border-radius:2px;
+position:absolute
+}
+#battery--indicator:before{width:82px;height:40px;margin:-12px;}
+#battery--indicator:after{width:6px;height:16px;margin:0 87px;background-color:rgb(0,0,0)}
+.indicator--one{background-color:transparent;width:9px;height:28px;position:absolute}
+.indicator--two{-webkit-animation:indicator--two 3s linear infinite;animation:indicator--two 3s linear infinite;left:15px}
+.indicator--tree{-webkit-animation:indicator--tree 3s linear infinite;animation:indicator--tree 3s linear infinite;left:30px}
+.indicator--for{-webkit-animation:indicator--for 3s linear infinite;animation:indicator--for 3s linear infinite;left:45px}
+.indicator--five{-webkit-animation:indicator--five 3s linear infinite;animation:indicator--five 3s linear infinite;left:60px}
+@keyframes indicator--two{0%{opacity:0}100%,25%,50%,75%{opacity:1;background-color:rgba(0,0,0,0.4)}}
+@-webkit-keyframes indicator--two{0%{opacity:0}100%,25%,50%,75%{opacity:1;background-color:rgba(0,0,0,0.4)}}
+@keyframes indicator--tree{0%,25%{opacity:0}100%,50%,75%{opacity:1;background-color:rgba(0,0,0,0.6)}}
+@-webkit-keyframes indicator--tree{0%,25%{opacity:0}100%,50%,75%{opacity:1;background-color:rgba(0,0,0,0.6)}}
+@keyframes indicator--for{0%,25%,50%{opacity:0}100%,75%{opacity:1;background-color:rgba(0,0,0,0.8)}}
+@-webkit-keyframes indicator--for{0%,25%,50%{opacity:0}100%,75%{opacity:1;background-color:rgba(0,0,0,0.8)}}
+@keyframes indicator--five{0%,25%,50%,75%{opacity:0}100%{opacity:1;background-color:rgba(0,0,0,1)}}
+@-webkit-keyframes indicator--five{0%,25%,50%,75%{opacity:0}100%{opacity:1;background-color:rgba(0,0,0,1)}}

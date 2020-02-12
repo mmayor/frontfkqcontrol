@@ -10,11 +10,12 @@ export class ChartVibration extends React.Component {
 			datasets: [
 				{
 					label: "Test Motor",
-					fill: false,
-					lineTension: 0.5,
-					backgroundColor: "rgba(75,192,192,1)",
-					borderColor: "rgba(0,0,0,1)",
-					borderWidth: 2,
+					fillColor: "rgba(151,187,205,0.2)",
+					strokeColor: "rgba(151,187,205,1)",
+					pointColor: "rgba(151,187,205,1)",
+					pointStrokeColor: "#fff",
+					pointHighlightFill: "#fff",
+					pointHighlightStroke: "rgba(151,187,205,1)",
 					data: [4, 10, 20, 30, 40, 10, 25, 36]
 				}
 			]
@@ -32,11 +33,11 @@ export class ChartVibration extends React.Component {
 								options={{
 									title: {
 										display: true,
-										text: "C / t",
+										text: "Frequency(HZ) / Time(s) ",
 										fontSize: 20
 									},
 									legend: {
-										display: false,
+										display: true,
 										position: "bottom"
 									}
 								}}

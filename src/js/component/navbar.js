@@ -47,7 +47,12 @@ export class Navbar extends React.Component {
 								My Stock
 							</a>
 						</li>*/}
-									<li className="nav-item active">
+
+									{/**
+                                
+                                
+                                
+                                	<li className="nav-item active">
 										<Link className="nav-link" to="/motortest">
 											Motor Test
 										</Link>
@@ -61,7 +66,23 @@ export class Navbar extends React.Component {
 											Simulate Test
 										</Link>
 									</li>
+*/}
+									<li className="nav-item active">
+										<Link
+											className="nav-link"
+											to="/testraspberry"
+											onClick={() => actions.destroyStore()}>
+											Test Raspberry
+										</Link>
+									</li>
+									{/**
 
+									<li className="nav-item active">
+										<Link className="nav-link" to="/battery" onClick={() => actions.destroyStore()}>
+											Test Battery
+										</Link>
+									</li>
+ */}
 									<li className="nav-item active">
 										<Link
 											className="nav-link"
